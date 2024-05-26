@@ -1,0 +1,131 @@
+body {
+    background-color: #F0F0F0;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('../font/Inter.ttf');
+}
+
+@font-face {
+    font-family: "Krub";
+    src: url('../font/Krub-Regular.ttf');
+}
+
+.menu {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.fontmenu {
+    font-size: 1.3em;
+    text-decoration: none;
+    font-family: "Inter";
+    color: black;
+    padding-left: 8px;
+}
+
+.options {
+    display: flex;
+    padding-left: 18px;
+}
+
+.opc {
+    display: flex;
+    align-items: center;
+    padding-left: 78px;
+}
+
+.txt-gato {
+    font-family: "Krub";
+    width: 700px;
+    font-size: 1.3em;
+}
+
+/* PRIMEIRA SESSAO */
+
+.btn-firstsess {
+    padding: 15px 28px;
+    font-size: 1.2em;
+    font-family: "Inter";
+    border: solid 2px;
+}
+
+.first-sess {
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.moveis {
+    display: flex;
+    flex-direction: column;
+}
+
+#luzes {
+    position: absolute;
+    top: -200px;
+    right: 380px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 3s, top 3s;
+}
+
+#sofa {
+    position: absolute;
+    top: 190px;
+    right: 100px;
+    width: 600px;
+    opacity: 0;
+    transition: opacity 3s, width 3s, top 3s, right 3s;
+}
+
+#mesa {
+    position: absolute;
+    top: 490px;
+    opacity: 0;
+    right: 0px;
+    transition: opacity 1s, width 3s, top 3s, right 3s;
+}
+
+.seta {
+    position: relative;
+    left: 800px;
+    top: 100px;
+}
+
+.entrar {
+    position: absolute;
+    right: 100px;
+    display: flex;
+    padding-top: 10px;
+}
+
+.ent{
+    padding: 0;
+}
+
+.entrar img {
+    padding-left: 10px;
+}
+
+/* SEGUNDA SESSAO */
+
+/* .second-sess {
+
+} */
+
+
+/* Animações */
+.first-sess {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fim visível */
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dominik Móveis</title>
+</head>
+<body>
+    <!-- MENU -->
+    <div class="menu">
+        <div class="icon-domink">
+            <img src="img/icondomink.png" alt="Ícone do menu" width="120px">
+        </div>
+        <div class="options">
+            <div class="opc">
+                <img src="img/palito.png" alt="">
+                <a class="fontmenu" href="">INÍCIO</a>
+            </div>
+            <div class="opc">
+                <img src="img/palito.png" alt="">
+                <a class="fontmenu" href="">CATÁLOGO</a>
+            </div>
+            <div class="opc">
+                <img src="img/palito.png" alt="">
+                <a class="fontmenu" href="">SOBRE-NÓS</a>
+            </div>
+            <div class="opc">
+                <img src="img/palito.png" alt="">
+                <a class="fontmenu" href="">CONTATE-NOS</a>
+            </div>
+            <div class="entrar">
+                <div class="opc">
+                    <a class="fontmenu" href="">ENTRAR</a>
+                </div>
+                <img src="img/palito.png" alt="">
+                <div class="opc ent">
+                    <a class="fontmenu" href="">CADASTRAR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="principal-body">
+        <div class="first-sess">
+            <div class="text-introd">
+            <img src="img/icondomink-g.png" alt="Ícone grande" width="400px">
+            <p class="txt-gato">
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou.
+            </p>
+            <button class="btn-firstsess">VER CATÁLOGO</button>
+            </div>
+            <div class="moveis">
+                <img id="luzes" src="img/luzes.png" alt="" width="300px">
+                <img id="sofa" src="img/sofá.png" alt="" width="100px">
+                <img id="mesa" src="img/mesa.png" alt="" width="500px">
+            </div>
+        </div>
+        <img class="seta" src="img/setasess.png" alt="" width="70px">
+
+        <!-- SEGUNDA SESSAO -->
+        <div class="second-sess">
+            <div class="topo">
+                <h2 class="titulo">O QUE ENTREGAMOS?</h2>
+                <h4 class="subtitulo">MÓVEIS MODERNOS A BAIXO PREÇO</h4>
+            </div>
+            <div class="carrossel">
+                <button id="anterior" onclick="anterior()"><img src="img/seta-esq" alt="Móvel anterior"></button>
+
+                <div class="carr-moveis">
+                    <div class="carr-item ativo">
+                        <img src="img/carr-sofa.png" alt="Sofá">
+                    </div>
+                    <div class="carr-item">
+                        <img src="img/carr-sofa.png" alt="Sofá">
+                    </div>
+                    <div class="carr-item">
+                        <img src="img/carr-sofa.png" alt="Sofá">
+                    </div>
+                </div>
+
+                <button id="proximo" onclick="proximo()"><img src="img/seta-dir" alt="Próximo móvel"></button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
