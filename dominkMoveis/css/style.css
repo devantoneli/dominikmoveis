@@ -92,8 +92,8 @@ body {
 
 .seta {
     position: relative;
-    left: 800px;
-    top: 100px;
+    left: 880px;
+    top: 160px;
 }
 
 .entrar {
@@ -113,10 +113,29 @@ body {
 
 /* SEGUNDA SESSAO */
 
-/* .second-sess {
+.second-sess {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 240px;
+}
 
-} */
+.botao-vazio {
+    border: none;
+}
 
+.topo {
+    font-family: 'Inter';
+    text-align: center;
+}
+
+.titulo {
+    font-size: 3em;
+}
+
+.subtitulo {
+    font-size: 1.4em;
+}
 
 /* Animações */
 .first-sess {
