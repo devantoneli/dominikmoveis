@@ -137,6 +137,82 @@ body {
     font-size: 1.4em;
 }
 
+.carrossel {
+    display: flex;
+    flex-direction: row;
+}
+
+.carr-moveis {
+
+}
+
+#cama {
+    position: absolute;
+}
+
+#mesa {
+    position: absolute;
+}
+
+#estante {
+    position: absolute;
+}
+
+#comoda {
+    position: absolute;
+}
+
+/* CADASTRO */
+
+.baseCadastro{
+    font-family: "Inter";
+    width: 500px;
+    border: solid 2px;
+    padding: 30px;
+}
+
+#fechar {
+    margin-left: 330px;
+}
+
+.btnCad{
+    margin-top: 30px;
+    width: 230px;
+    align-self: center;
+}
+
+.inputsCadastro{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputCadastro {
+    margin: 10px;
+    height: 40px;
+    background: none;
+    border: solid 0px;
+    border-bottom: solid 2px;
+}
+
+.inputCadastro:focus-visible{
+    outline: none;
+}
+
+label {
+    position: relative;
+    top: 30px;
+    left: 22px;
+    font-size: 20px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.inputCadastro:focus-visible ~ label{
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+}
 /* Animações */
 .first-sess {
     opacity: 0;
