@@ -129,3 +129,53 @@ body {
         opacity: 1; /* Fim visível */
     }
 }
+
+/* CATÁLOGO */
+
+.comodo{
+    display: flex;
+    flex-direction: column;
+}
+
+.cabeçalho {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0px;
+}
+
+.cabeçalho h1{
+    font-family: "Inter";
+    font-size: 3.0em;
+    padding-right: 50px;
+}
+
+.cabeçalho img{
+    width: auto;
+    height: 35px;
+    padding-top: 43px;
+}
+
+.itens{
+    display: flex;
+    flex-direction: row;
+}
+
+.movel{
+    display: flex;
+    flex-direction: column;
+}
+
+.cores{
+    display: flex;
+    flex-direction: row;
+}
+
+.descrição{
+    display: flex;
+    flex-direction: column;
+}
+
+.linha{
+    padding: 30px 100px;
+}
