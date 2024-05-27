@@ -154,6 +154,7 @@ body {
 .comodo{
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .cabeçalho {
@@ -183,18 +184,57 @@ body {
 .movel{
     display: flex;
     flex-direction: column;
+    border: solid 2px;
+    padding: 20px;
+    margin-right: 40px;
+    width: 230px;
 }
 
 .cores{
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.cores img{
+    margin-top: 10px;
+    margin-right: 5px;
 }
 
 .descrição{
     display: flex;
     flex-direction: column;
+    font-family: 'Inter';
+}
+
+.descrição h2{
+    margin-bottom:0px;
 }
 
 .linha{
     padding: 30px 100px;
+}
+
+.imgQuadro {
+    background-color: white;
+    border: solid 2px;
+    width: 205px;
+    margin-left: 13px;
+    padding-left:  -200px;
+    padding-right: -200px;
+}
+
+.sofa {
+    position: relative;
+    width: 250px; /* Ajuste conforme necessário para aumentar o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    left: -23px;
+}
+
+.carrinho {
+    text-align: right;
+}
+
+.carrinho button{
+    border: none;
 }
