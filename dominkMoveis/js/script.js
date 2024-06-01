@@ -53,6 +53,7 @@ class novoUsuario {
     this.senha = senha
   }
 }
+
 //CADASTRO
 function cadastrar() {
   //pega as informações que o usuário escreveu
@@ -64,7 +65,9 @@ function cadastrar() {
   if (nome && usuario && senha) {
       const usu = new novoUsuario(nome, usuario, senha);
       saveToLocalStorage(usu);
-      nomeCompleto.value = '';
+      document.getElementById('nomeCompleto').value = '';
+      document.getElementById('usuario').value = '';
+      document.getElementById('senha').value = '';
       alert(`Nome ${nome} cadastrado com sucesso!`);
   } else {
       alert('Por favor, preencha todos os campos.');
