@@ -31,11 +31,11 @@
             </div>
             <div class="entrar">
                 <div class="opc">
-                    <a class="fontmenu" href="">ENTRAR</a>
+                    <button class="btnOpc" onclick=""><a class="fontmenu" href="">ENTRAR</a></button>
                 </div>
                 <img src="img/palito.png" alt="">
                 <div class="opc ent">
-                    <a class="fontmenu" href="">CADASTRAR</a>
+                    <button class="btnOpc" onclick="cadastrar('abrir')"><a class="fontmenu">CADASTRAR</a></button>
                 </div>
             </div>
         </div>
@@ -82,6 +82,23 @@
                 </div>
 
                 <button class="botao-vazio" id="proximo" onclick="proximo()"><img src="img/seta-dir.png" alt="Próximo móvel"></button>
+            </div>
+        </div>
+        <!-- CADASTRO -->
+        <div class="baseCadastro">
+            <div class="topCadastro">
+                <img src="img/icondomink.png" alt="Ícone do menu" width="120px">
+                <button id="btnFechar" onclick="cadastrar('fechar')"><img id="fechar" src="img/fechar.png" alt="Fechar" width="40px"></button>
+            </div>
+            <h1>CADASTRO</h1>
+            <div class="inputsCadastro">
+                <label id="nC" for="nomeCompleto">nome completo</label>
+                <input class="inputCadastro" type="text" name="nomeCompleto" id="nomeCompleto">
+                <label id="" for="usuario">usuario</label>
+                <input class="inputCadastro" type="text" name="usuario" id="usuario">
+                <label id="" for="senha">senha</label>
+                <input class="inputCadastro" type="password" name="senha" id="senha">
+                <button class="btn-firstsess btnCad" onclick="cadastrar()">CADASTRAR</button>
             </div>
         </div>
     </div>
