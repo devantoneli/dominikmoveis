@@ -142,10 +142,6 @@ body {
     flex-direction: row;
 }
 
-.carr-moveis {
-
-}
-
 #cama {
     position: absolute;
 }
@@ -316,6 +312,10 @@ body {
     margin-bottom:0px;
 }
 
+.descrição p{
+    font-size: 25px;
+}
+
 .linha{
     padding: 30px 100px;
 }
@@ -324,7 +324,7 @@ body {
     background-color: white;
     border: solid 2px;
     width: 205px;
-    margin-left: 13px;
+    margin-left: 0px;
     padding-left:  -200px;
     padding-right: -200px;
 }
