@@ -302,15 +302,29 @@ label {
 
 .sofa {
     position: relative;
-    width: 250px; /* Ajuste conforme necessário para aumentar o tamanho da imagem */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 250px; 
+    height: auto;
     left: -23px;
 }
 
 .carrinho {
     text-align: right;
+    display: flex;
+    justify-content: right;
+    filter: brightness(50%);
 }
 
 .carrinho button{
     border: none;
+    background: none;
+    font-size: 18px;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
 }
+
+.carrinho :hover{
+    filter: brightness(40%);
+}
+
