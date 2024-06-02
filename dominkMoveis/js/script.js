@@ -54,6 +54,9 @@ class novoUsuario {
   }
 }
 
+class user extends novoUsuario {
+}
+
 //CADASTRO
 function cadastrar() {
   //pega as informações que o usuário escreveu
@@ -63,7 +66,7 @@ function cadastrar() {
 
   //verifica se de fato está preenchido
   if (nome && usuario && senha) {
-      const usu = new novoUsuario(nome, usuario, senha);
+      const usu = new user(nome, usuario, senha);
       saveToLocalStorage(usu);
       document.getElementById('nomeCompleto').value = '';
       document.getElementById('usuario').value = '';
@@ -79,4 +82,18 @@ function saveToLocalStorage(usuario) {
   const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
   usuarios.push(usuario);
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
+}
+
+//CADASTRAR
+function cadastrar(acao){
+  switch(acao){
+    case 'abrir':{
+      document.getElementsByClassName('baseCadastro')[0].style.display = 'block'
+      break;
+    }
+    case 'fechar':{
+      document.getElementsByClassName('baseCadastro')[0].style.display = 'none'
+      break;
+    }
+  }
 }
