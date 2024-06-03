@@ -182,7 +182,7 @@ class infoMovel {
 var moveis = [];
 
 var sofa1 = new infoMovel("img/sofá.png", "SOFÁ 3 LUGARES CLEAN COM TECIDO MACIO", 1259.90);
-var sofa2 = new infoMovel("img/sofá2.png", "SOFÁ MORDERNO CLÁSSICO", 2890);
+var sofa2 = new infoMovel("img/sofá2.png", "SOFÁ MORDERNO CLÁSSICO COM 3 ALMOFADAS", 2890);
 var sofa3 = new infoMovel("img/sofá3.png", "SOFÁ ELEGANTE COM QUATRO ALMOFADAS", 4199.90);
 
 var armario1 = new infoMovel("img/armario.png", "ARMÁRIO COZINHA JULIETE", 2569);
@@ -283,7 +283,7 @@ function parcialCarrinho(){
           var item = usuario.carrinho[i];
           logadoList.innerHTML += `<div class="movel">
           <div class="imgQuadro">
-              <img class="sofa" src="img/sofá.png" alt="Sofá" style="height: 200px !important;">
+              <img class="sofa" src="${item.img}" alt="Sofá" style="height: 200px !important;">
           </div>
           <div class="cores">
               <img src="img/verde.png" alt="Verde">
