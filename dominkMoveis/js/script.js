@@ -255,4 +255,50 @@ function showCarrinho(){
     } 
 }
 
-showCarrinho();
+//VERIFICAR SE A PAGINA É A CORRETA PARA CARREGAR PARCIAL CARRINHO
+function isPaginaLogado() {
+  return window.location.pathname == '/dominkMoveis/logado.html';
+}
+
+function loadPaginaLogado() {
+  if (isPaginaLogado()) {
+      parcialCarrinho()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  loadPaginaLogado();
+});
+
+
+//MOSTRAR PARCIALMENTE NO INICIO LOGADO
+function parcialCarrinho(){
+  var logadoList = document.getElementById('logadoList');
+
+  var usuario = JSON.parse(sessionStorage.getItem('usuario'));
+    
+  if (usuario && usuario.carrinho && Array.isArray(usuario.carrinho) && usuario.carrinho.length != 0) {
+      // Itera sobre cada item no carrinho
+      for (var i = 0; i < 3; i++) {
+          var item = usuario.carrinho[i];
+          logadoList.innerHTML += `<div class="movel">
+          <div class="imgQuadro">
+              <img class="sofa" src="img/sofá.png" alt="Sofá" style="height: 200px !important;">
+          </div>
+          <div class="cores">
+              <img src="img/verde.png" alt="Verde">
+              <img src="img/vermelho.png" alt="Vermelho">
+              <img src="img/cinza.png" alt="Cinza">
+              <img src="img/bege.png" alt="Bege">
+          </div>
+          <div class="descrição">
+              <h2>${item.desc}</h2>
+              <p>${item.vl.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+          </div>
+      </div>`
+      }
+  } else {
+      document.getElementsByClassName("geral2")[0].style.display = "none";
+      document.getElementsByClassName("geral")[0].style.display = "block";
+  }
+}

@@ -386,7 +386,7 @@ label {
     height: 200px;
     font-family: 'Inter';
     padding: 30px;
-    display: block;
+    display: none;
 }
 
 .showCarrinho p{
@@ -400,6 +400,11 @@ label {
     flex-direction: row;
     position: relative;
     left: 0px;
+}
+
+.mensagem a{
+    text-decoration: none;
+    color: black;
 }
 
 .cabeçalhoInicio h1{
