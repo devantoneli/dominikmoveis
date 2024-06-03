@@ -276,7 +276,7 @@ label {
     margin-bottom: 100px;
 }
 
-.cabeçalho {
+.cabeçalho{
     display: flex;
     flex-direction: row;
     position: relative;
@@ -338,7 +338,7 @@ label {
     padding: 30px 100px;
 }
 
-.imgQuadro {
+.imgQuadro{
     background-color: white;
     border: solid 2px;
     width: 205px;
@@ -347,14 +347,14 @@ label {
     padding-right: -200px;
 }
 
-.sofa {
+.sofa{
     position: relative;
     width: 250px; 
     height: auto;
     left: -23px;
 }
 
-.carrinho {
+.carrinho{
     text-align: right;
     display: flex;
     justify-content: right;
@@ -375,3 +375,55 @@ label {
     filter: brightness(40%);
 }
 
+/* INÍCIO LOGADO */
+
+.cabeçalhoInicio{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0px;
+}
+
+.cabeçalhoInicio h1{
+    font-family: "Inter";
+    font-size: 3.0em;
+    padding-right: 50px;
+    margin-top: 113px;
+    margin-left: 100px;
+}
+
+.geral{
+    display: flex;
+    flex-direction: column;
+}
+
+.corpo{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagens{
+    display: flex;
+    flex-direction: row;
+}
+
+.mensagem{
+    display: flex;
+    flex-direction: column;
+    margin-left: 140px;
+    margin-top: 90px;
+    width: 300px;
+    font-size: 24px;
+}
+
+.mensagem button{
+    border: 1px solid;
+    font-size: 20px;
+    background: none;
+    width: 190px;
+    height: 50px;
+}
+
+.carrinhoTriste{
+    margin-top: 90px;
+}
