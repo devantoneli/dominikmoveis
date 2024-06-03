@@ -31,11 +31,11 @@
             </div>
             <div class="entrar">
                 <div class="opc">
-                    <button class="btnOpc" onclick=""><a class="fontmenu" href="">ENTRAR</a></button>
+                    <button class="btnOpc" onclick="botaoCad('abrirLog')"><a class="fontmenu">ENTRAR</a></button>
                 </div>
                 <img src="img/palito.png" alt="">
                 <div class="opc ent">
-                    <button class="btnOpc" onclick="cadastrar('abrir')"><a class="fontmenu">CADASTRAR</a></button>
+                    <button class="btnOpc" onclick="botaoCad('abrirCad')"><a class="fontmenu">CADASTRAR</a></button>
                 </div>
             </div>
         </div>
@@ -88,19 +88,35 @@
         <div class="baseCadastro">
             <div class="topCadastro">
                 <img src="img/icondomink.png" alt="Ícone do menu" width="120px">
-                <button id="btnFechar" onclick="cadastrar('fechar')"><img id="fechar" src="img/fechar.png" alt="Fechar" width="40px"></button>
+                <button id="btnFechar" onclick="botaoCad('fecharCad')"><img src="img/fechar.png" alt="Fechar" width="40px"></button>
             </div>
             <h1>CADASTRO</h1>
             <div class="inputsCadastro">
                 <label id="nC" for="nomeCompleto">nome completo</label>
-                <input class="inputCadastro" type="text" name="nomeCompleto" id="nomeCompleto">
-                <label id="" for="usuario">usuario</label>
-                <input class="inputCadastro" type="text" name="usuario" id="usuario">
-                <label id="" for="senha">senha</label>
-                <input class="inputCadastro" type="password" name="senha" id="senha">
+                <input onblur="animaLabel()" onfocus="animaLabel('nC')" class="inputCadastro" type="text" name="nC" id="nomeCompleto">
+                <label id="uS" for="usuario">usuario</label>
+                <input onblur="animaLabel()" onfocus="animaLabel('uS')" class="inputCadastro" type="text" name="uS" id="usuario">
+                <label id="sE" for="senha">senha</label>
+                <input onblur="animaLabel()" onfocus="animaLabel('sE')" class="inputCadastro" type="password" name="sE" id="senha">
                 <button class="btn-firstsess btnCad" onclick="cadastrar()">CADASTRAR</button>
             </div>
         </div>
+        <!-- LOGIN -->
+        <div class="baseCadastro">
+            <div class="topCadastro">
+                <img src="img/icondomink.png" alt="Ícone do menu" width="120px">
+                <button id="btnFechar" onclick="botaoCad('fecharLog')"><img src="img/fechar.png" alt="Fechar" width="40px"></button>
+            </div>
+            <h1>LOGIN</h1>
+            <div class="inputsCadastro">
+                <label id="uSl" for="usuario">usuario</label>
+                <input onblur="animaLabel()" onfocus="animaLabel('uSl')" class="inputCadastro" type="text" name="uSl" id="usuariol">
+                <label id="sEl" for="senha">senha</label>
+                <input onblur="animaLabel()" onfocus="animaLabel('sEl')" class="inputCadastro" type="password" name="sEl" id="senhal">
+                <button class="btn-firstsess btnCad" onclick="entrar()">ENTRAR</button>
+            </div>
+        </div>
+        
     </div>
     <script src="js/script.js"></script>
 </body>
