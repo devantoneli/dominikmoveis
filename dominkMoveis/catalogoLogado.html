@@ -18,27 +18,23 @@
         <div class="options">
             <div class="opc">
                 <img src="img/palito.png" alt="">
-                <a class="fontmenu" href="">INÍCIO</a>
+                <a class="fontmenu" href="logado.html">INÍCIO</a>
             </div>
             <div class="opc">
                 <img src="img/palito.png" alt="">
-                <a class="fontmenu" href="">CATÁLOGO</a>
+                <a class="fontmenu" href="catalogoLogado.html">CATÁLOGO</a>
             </div>
             <div class="opc">
                 <img src="img/palito.png" alt="">
-                <a class="fontmenu" href="">SOBRE-NÓS</a>
+                <a class="fontmenu" href="carrinho.html">CARRINHO</a>
             </div>
             <div class="opc">
                 <img src="img/palito.png" alt="">
-                <a class="fontmenu" href="">CONTATE-NOS</a>
+                <a class="fontmenu" href="contateNos.html">CONTATE-NOS</a>
             </div>
             <div class="entrar">
                 <div class="opc">
-                    <a class="fontmenu" href="">ENTRAR</a>
-                </div>
-                <img src="img/palito.png" alt="">
-                <div class="opc ent">
-                    <a class="fontmenu" href="">CADASTRAR</a>
+                    <button class="btnOpc" onclick="botaoCont()"><a class="fontmenu" href="">CONTA</a></button>
                 </div>
             </div>
         </div>
@@ -67,7 +63,7 @@
                         <p>R$ 1.259,90</p>
                     </div>
                     <div class="carrinho">
-                        <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                        <button onclick="add(0)"><img src="img/carrinho.png" alt="Carrinho"></button>
                     </div>
                 </div>
 
@@ -82,11 +78,11 @@
                         <img src="img/bege.png" alt="Bege">
                     </div>
                     <div class="descrição">
-                        <h2>SOFÁ MORDERNO CLÁSSICO COM 3 ALMOFADAS</h2>
+                        <h2>SOFÁ MORDERNO CLÁSSICO</h2>
                         <p>R$ 2.890,00</p>
                     </div>
                     <div class="carrinho">
-                        <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                        <button onclick="add(1)"><img src="img/carrinho.png" alt="Carrinho"></button>
                     </div>
                 </div>
 
@@ -101,16 +97,11 @@
                         <img src="img/bege.png" alt="Bege">
                     </div>
                     <div class="descrição">
-<<<<<<< HEAD
-                        <h2>SOFÁ 3 LUGARES testeCLEAN</h2>
-                        <p>R$ 1.200</p>
-=======
                         <h2>SOFÁ ELEGANTE COM QUATRO ALMOFADAS</h2>
                         <p>R$ 4.199,90</p>
->>>>>>> 555fdde222d051676889d0bbed52c007d3a09818
                     </div>
                     <div class="carrinho">
-                        <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                        <button onclick="add(2)"><img src="img/carrinho.png" alt="Carrinho"></button>
                     </div>
                 </div>
             </div>
@@ -139,7 +130,7 @@
                             <p>R$ 2.569,90</p>
                         </div>
                         <div class="carrinho">
-                            <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                            <button onclick="add(3)"><img src="img/carrinho.png" alt="Carrinho"></button>
                         </div>
                     </div>
     
@@ -158,7 +149,7 @@
                             <p>R$ 4.029,70</p>
                         </div>
                         <div class="carrinho">
-                            <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                            <button onclick="add(4)"><img src="img/carrinho.png" alt="Carrinho"></button>
                         </div>
                     </div>
     
@@ -177,7 +168,7 @@
                             <p>R$ 1.299,90</p>
                         </div>
                         <div class="carrinho">
-                            <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                            <button onclick="add(5)"><img src="img/carrinho.png" alt="Carrinho"></button>
                         </div>
                     </div>
                 </div>
@@ -206,7 +197,7 @@
                                 <p>R$ 2.250,00</p>
                             </div>
                             <div class="carrinho">
-                                <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                                <button onclick="add(6)"><img src="img/carrinho.png" alt="Carrinho"></button>
                             </div>
                         </div>
         
@@ -225,7 +216,7 @@
                                 <p>R$ 10.742,22</p>
                             </div>
                             <div class="carrinho">
-                                <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                                <button onclick="add(7)"><img src="img/carrinho.png" alt="Carrinho"></button>
                             </div>
                         </div>
         
@@ -244,7 +235,7 @@
                                 <p>R$ 5.629,90</p>
                             </div>
                             <div class="carrinho">
-                                <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                                <button onclick="add(8)"><img src="img/carrinho.png" alt="Carrinho"></button>
                             </div>
                         </div>
                     </div>
@@ -273,7 +264,7 @@
                                     <p>R$ 3.419,90</p>
                                 </div>
                                 <div class="carrinho">
-                                    <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                                    <button onclick="add(9)"><img src="img/carrinho.png" alt="Carrinho"></button>
                                 </div>
                             </div>
             
@@ -292,7 +283,7 @@
                                     <p>R$ 305,91</p>
                                 </div>
                                 <div class="carrinho">
-                                    <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                                    <button onclick="add(10)"><img src="img/carrinho.png" alt="Carrinho"></button>
                                 </div>
                             </div>
             
@@ -311,11 +302,18 @@
                                     <p>R$ 220,00</p>
                                 </div>
                                 <div class="carrinho">
-                                    <button onclick=""><img src="img/carrinho.png" alt="Carrinho"></button>
+                                    <button onclick="add(11)"><img src="img/carrinho.png" alt="Carrinho"></button>
                                 </div>
                             </div>
                         </div>
                             
+                        </div>
+
+                        <!-- APRESENTANDO CARRINHO -->
+                        <div class="showCarrinho">
+                            <h1>R$ 100,00</h1>
+                            <p><a>4</a> itens</p>
+                            <button class="btn-firstsess btnCad">VER CARRINHO</button>
                         </div>
         </div>
     </div>
