@@ -15,35 +15,35 @@ window.onload = function() {
   };
 
   //CARROSSEL DE MOVEIS
-  document.addEventListener('DOMContentLoaded', function() {
-    //USA QUERY SELECTOR PARA CAPTURAR OS ELEMENTOS
-    const carrMoveis = document.querySelector('.carr-moveis');
-    const carrItem = document.querySelectorAll('.carr-item');
-    const anterior = document.querySelector('#anterior');
-    const proximo = document.querySelector('#proximo');
-    let index = 0;
+//   document.addEventListener('DOMContentLoaded', function() {
+//     //USA QUERY SELECTOR PARA CAPTURAR OS ELEMENTOS
+//     const carrMoveis = document.querySelector('.carr-moveis');
+//     const carrItem = document.querySelectorAll('.carr-item');
+//     const anterior = document.querySelector('#anterior');
+//     const proximo = document.querySelector('#proximo');
+//     let index = 0;
 
-    function motreSlide(newIndex) {
-        if (newIndex < 0) {
-            index = carrItem.length - 1;
-        } else if (newIndex >= carrItem.length) {
-            index = 0;
-        } else {
-            index = newIndex;
-        }
-        carrMoveis.style.transform = `translateX(-${index * 100}%)`;
-    }
+//     function motreSlide(newIndex) {
+//         if (newIndex < 0) {
+//             index = carrItem.length - 1;
+//         } else if (newIndex >= carrItem.length) {
+//             index = 0;
+//         } else {
+//             index = newIndex;
+//         }
+//         carrMoveis.style.transform = `translateX(-${index * 100}%)`;
+//     }
 
-    anterior.addEventListener('click', function() {
-        motreSlide(index - 1);
-    });
+//     anterior.addEventListener('click', function() {
+//         motreSlide(index - 1);
+//     });
 
-    proximo.addEventListener('click', function() {
-        motreSlide(index + 1);
-    });
+//     proximo.addEventListener('click', function() {
+//         motreSlide(index + 1);
+//     });
 
-    motreSlide(index); // Initialize the first slide
-});
+//     motreSlide(index); // Initialize the first slide
+// });
 
 //CADASTRO
 class novoUsuario {
@@ -213,4 +213,46 @@ function add(movel){
 
     console.log(moveis)
     console.log(moveis[movel])
+    showCarrinho();
 }
+
+//SOMAR VALORES DO CARRINHO
+function somaValoresCarrinho() {
+  // Recupera o objeto usuario da sessionStorage
+  var usuario = JSON.parse(sessionStorage.getItem('usuario'));
+  
+  // Verifica se o objeto usuario e o carrinho existem
+  if (usuario && usuario.carrinho && Array.isArray(usuario.carrinho)) {
+      // Calcula a soma dos valores da propriedade 'vl' no carrinho
+      var soma = usuario.carrinho.reduce(function(total, item) {
+          return total + item.vl;
+      }, 0);
+      
+      return soma;
+  } else {
+      // Se o carrinho não existe ou está vazio, retorna 0
+      return 0;
+  }
+}
+
+
+//MOSTRAR CARRINHO
+function showCarrinho(){
+    var carrinho = document.getElementsByClassName('showCarrinho')[0];
+    var aElement = document.querySelector('.showCarrinho a');
+    var h1Element = document.querySelector('.showCarrinho h1');
+    // Recupera o usuário da sessão
+    var usuario = JSON.parse(sessionStorage.getItem('usuario'));
+  
+    // Verifica se o carrinho está vazio
+    if (usuario && usuario.carrinho && usuario.carrinho.length === 0) {
+        carrinho.style.display = "none";
+    } else {
+        var totalCarrinho = somaValoresCarrinho();
+        carrinho.style.display = "block";
+        h1Element.textContent = totalCarrinho.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        aElement.textContent = usuario.carrinho.length;
+    } 
+}
+
+showCarrinho();

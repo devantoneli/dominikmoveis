@@ -376,6 +376,23 @@ label {
     filter: brightness(40%);
 }
 
+/* SHOW CARRINHO */
+
+.showCarrinho {
+    position: fixed;
+    background-color: white;
+    bottom: 0vw;
+    right: 0vw;
+    height: 200px;
+    font-family: 'Inter';
+    padding: 30px;
+    display: block;
+}
+
+.showCarrinho p{
+    font-size: 1.2em;
+}
+
 /* INÍCIO LOGADO SEM CARRINHO */
 
 .cabeçalhoInicio{
@@ -471,6 +488,7 @@ label {
     width: 10px;
     height: 580px;
 }
+
 
 /* SOBRE-NÓS */
 
