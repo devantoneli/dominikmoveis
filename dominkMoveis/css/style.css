@@ -188,6 +188,7 @@ body {
 .btnOpc {
     border: none;
     font-size: 1.1em;
+    background: none;
 }
 
 .btnOpc:hover {
@@ -357,7 +358,7 @@ body {
     filter: brightness(40%);
 }
 
-/* INÍCIO LOGADO */
+/* INÍCIO LOGADO SEM CARRINHO */
 
 .cabeçalhoInicio{
     display: flex;
@@ -375,7 +376,7 @@ body {
 }
 
 .geral{
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -393,9 +394,10 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 140px;
-    margin-top: 90px;
+    padding-top: 90px;
     width: 300px;
     font-size: 24px;
+    font-family: "Inter";
 }
 
 .mensagem button{
@@ -404,8 +406,51 @@ body {
     background: none;
     width: 190px;
     height: 50px;
+    cursor: pointer;
 }
 
 .carrinhoTriste{
     margin-top: 90px;
 }
+
+/* INÍCIO LOGADO COM CARRINHO */
+
+.informação{
+    font-size: 34px;
+    font-family: "Inter";
+    margin-left: 100px;
+}
+
+.mid{
+    display: flex;
+    flex-direction: row;
+}
+
+.alinhaLista{
+     padding: 30px 0;
+}
+
+.botaoFinalizar button{
+    border: 1px solid;
+    font-size: 20px;
+    background: none;
+    width: 275px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.linha2{
+    padding: 30px 100px;
+}
+
+.linha2 img{
+    width: 10px;
+    height: 580px;
+}
+
