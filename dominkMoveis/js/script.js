@@ -96,10 +96,26 @@ function entrar() {
   });
 
   if (usuarioEncontrado) {
-      console.log("Logado");
+    let infoUsuario = {"usuario": usuariol, "carrinho": []};
+    login(infoUsuario);
+    window.location.href = "logado.html";
   } else {
-      console.log("Não existe");
+    alert("Usuário ou senha incorreto");
   }
+}
+
+//ADICIONANDO USUARIO LOGADO AO REGISTRO
+function login(info){
+    // Verifica se há um usuário existente na sessão
+    const usuarioExistente = JSON.parse(sessionStorage.getItem('usuario'));
+
+    // Se houver um usuário existente, remove-o
+    if (usuarioExistente) {
+        sessionStorage.removeItem('usuario');
+    }
+
+    // Adiciona o novo usuário
+    sessionStorage.setItem('usuario', JSON.stringify(info));
 }
 
 //ABRI E FECHAR CADASTRO/LOGIN
@@ -153,4 +169,48 @@ function animaLabel(label){
       }
     }
   });
+}
+
+//CATALOGO MOVEIS
+class infoMovel {
+  constructor(img, desc, vl){
+    this.img = img;
+    this.desc = desc;
+    this.vl = vl
+  }
+}
+var moveis = [];
+
+var sofa1 = new infoMovel("img/sofá.png", "SOFÁ 3 LUGARES CLEAN COM TECIDO MACIO", 1259.90);
+var sofa2 = new infoMovel("img/sofá2.png", "SOFÁ MORDERNO CLÁSSICO", 2890);
+var sofa3 = new infoMovel("img/sofá3.png", "SOFÁ ELEGANTE COM QUATRO ALMOFADAS", 4199.90);
+
+var armario1 = new infoMovel("img/armario.png", "ARMÁRIO COZINHA JULIETE", 2569);
+var armario2 = new infoMovel("img/armario2.png", "ARMÁRIO COZINHA ARIZONA", 4029);
+var armario3 = new infoMovel("img/armario3.png", "ARMÁRIO COZINHA MADESA", 1299);
+
+var cama1 = new infoMovel("img/cama.png", "CAMA MODERNA SIMPLES", 2250);
+var cama2 = new infoMovel("img/cama2.png", "CAMA DINA ELEGANTE", 10742.22);
+var cama3 = new infoMovel("img/cama3.png", "CAMA JACQUELINE", 5629.90);
+
+var dec1 = new infoMovel("img/estante.png", "ESTANTE INDUSTRIAL RAVENA", 3419.90);
+var dec2 = new infoMovel("img/escultura.png", "ESCULTURA DECORATIVA ABSTRATA", 305.91);
+var dec3 = new infoMovel("img/vaso.png", "KIT 3 VASOS ESPIRAIS MODERNO", 220);
+
+moveis.push(sofa1, sofa2, sofa3, armario1, armario2, armario3, cama1, cama2, cama3, dec1, dec2, dec3);
+
+//ADICIONANDO MOVEIS AO CARRINHO
+
+function add(movel){
+    // Recupera o usuário da sessão
+    var usuario = JSON.parse(sessionStorage.getItem('usuario'));
+    
+    // Adiciona o novo item ao carrinho do usuário
+    usuario.carrinho.push(moveis[movel]);
+    
+    // Atualiza o usuário na sessão
+    sessionStorage.setItem('usuario', JSON.stringify(usuario));
+
+    console.log(moveis)
+    console.log(moveis[movel])
 }
