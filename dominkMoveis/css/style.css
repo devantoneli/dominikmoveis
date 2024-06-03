@@ -162,8 +162,8 @@ body {
 
 .baseCadastro{
     font-family: "Inter";
-    top: 200px;
-    left: 700px;
+    top: 24vh;
+    left: 33vw;
     width: 500px;
     border: solid 2px;
     padding: 60px;
@@ -217,27 +217,21 @@ body {
     background: none;
     border: solid 0px;
     border-bottom: solid 2px;
+    font-size: 20px;
 }
 
 .inputCadastro:focus-visible{
     outline: none;
 }
 
-#nC {
+label {
     position: relative;
     top: 30px;
     left: 22px;
     font-size: 20px;
-    transition: 0.2s ease all;
     pointer-events: none;
 }
 
-#nomeCompleto:focus-visible ~ #nC{
-    top: -10px;
-    left: 10px;
-    font-size: 12px;
-    color: #333;
-}
 /* Animações */
 .first-sess {
     opacity: 0;
@@ -247,6 +241,30 @@ body {
 @keyframes fadeIn {
     to {
         opacity: 1; /* Fim visível */
+    }
+}
+
+@keyframes upLabel {
+    to {
+        top: 3px;
+        left: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+}
+
+@keyframes downLabel {
+    from {
+        top: 3px;
+        left: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+    to {
+        top: 30px;
+        left: 22px;
+        font-size: 20px;
+        color: #000000;
     }
 }
 

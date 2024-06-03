@@ -84,16 +84,73 @@ function saveToLocalStorage(usuario) {
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
 }
 
-//CADASTRAR
-function cadastrar(acao){
+//LOGIN
+function entrar() {
+  var usuariol = document.getElementById("usuariol").value;
+  let senhal = document.getElementById("senhal").value;
+
+  let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
+  var usuarioEncontrado = usuarios.find(function(usuario) {
+    return usuario.usuario === usuariol && usuario.senha === senhal;
+  });
+
+  if (usuarioEncontrado) {
+      console.log("Logado");
+  } else {
+      console.log("Não existe");
+  }
+}
+
+//ABRI E FECHAR CADASTRO/LOGIN
+function botaoCad(acao){
   switch(acao){
-    case 'abrir':{
+    case 'abrirCad':{
       document.getElementsByClassName('baseCadastro')[0].style.display = 'block'
       break;
     }
-    case 'fechar':{
+    case 'fecharCad':{
       document.getElementsByClassName('baseCadastro')[0].style.display = 'none'
+      let inputsCad = document.getElementsByClassName('baseCadastro')[0].getElementsByTagName("input");
+      for (let i = 0; i < inputsCad.length; i++) {
+        inputsCad[i].value = '';
+      }
+
+      break;
+    }
+    case 'abrirLog':{
+      document.getElementsByClassName('baseCadastro')[1].style.display = 'block'
+      break;
+    }
+    case 'fecharLog':{
+      document.getElementsByClassName('baseCadastro')[1].style.display = 'none'
+      let inputsLog = document.getElementsByClassName('baseCadastro')[1].getElementsByTagName("input");
+      for (let i = 0; i < inputsLog.length; i++) {
+        inputsLog[i].value = '';
+      }
       break;
     }
   }
+}
+
+//ANIMA LABEL
+function animaLabel(label){
+  let sele = label ? label : null;
+  let nC = document.getElementById('nC');
+  let uS = document.getElementById('uS');
+  let sE = document.getElementById('sE');
+  let uSl = document.getElementById('uSl');
+  let sEl = document.getElementById('sEl');
+  let labels = [nC, uS, sE, uSl, sEl];
+
+  labels.forEach(element => {
+    let input = element.id == 'nC' ? document.getElementById('nomeCompleto') : element.id == 'uS' ? document.getElementById('usuario') : element.id == 'sE' ? document.getElementById('senha') : element.id == "uSl" ? document.getElementById('usuariol') : element.id == "sEl" ? document.getElementById('senhal') : null;
+    if(element.id == sele){
+      element.style.animation = 'upLabel 1s forwards'
+    }else {
+      if (element.style.animation == '1s ease 0s 1 normal forwards running upLabel' && (input.name == element.id && input.value == '')){
+        element.style.animation = 'downLabel 1s forwards'
+      }
+    }
+  });
 }
