@@ -299,6 +299,7 @@ label {
 .itens{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .movel{
@@ -308,6 +309,7 @@ label {
     padding: 20px;
     margin-right: 40px;
     width: 230px;
+    margin-bottom: 50px;
 }
 
 .cores{
