@@ -131,7 +131,6 @@ function botaoCad(acao){
       for (let i = 0; i < inputsCad.length; i++) {
         inputsCad[i].value = '';
       }
-
       break;
     }
     case 'abrirLog':{
@@ -144,6 +143,9 @@ function botaoCad(acao){
       for (let i = 0; i < inputsLog.length; i++) {
         inputsLog[i].value = '';
       }
+      break;
+    }
+    default :{
       break;
     }
   }
@@ -260,9 +262,15 @@ function isPaginaLogado() {
   return window.location.pathname == '/dominkMoveis/logado.html';
 }
 
+function isPaginaCarrinho(){
+  return window.location.pathname == '/dominkMoveis/carrinho.html';
+}
+
 function loadPaginaLogado() {
   if (isPaginaLogado()) {
-      parcialCarrinho()
+      parcialCarrinho();
+  } else if (isPaginaCarrinho()){
+      caCarrinho();
   }
 }
 
@@ -301,4 +309,54 @@ function parcialCarrinho(){
       document.getElementsByClassName("geral2")[0].style.display = "none";
       document.getElementsByClassName("geral")[0].style.display = "block";
   }
+}
+
+//MOSTRAR NA TELA DE CARRINHO
+function caCarrinho(){
+  var logadoList = document.getElementById('caCarrinho');
+  var i = 0;
+  var usuario = JSON.parse(sessionStorage.getItem('usuario'));
+    
+  if (usuario && usuario.carrinho && Array.isArray(usuario.carrinho) && usuario.carrinho.length != 0) {
+   
+      do {
+          i++
+          var item = usuario.carrinho[i];
+          logadoList.innerHTML += `<div class="movel">
+          <div class="imgQuadro">
+              <img class="sofa" src="${item.img}" alt="Sofá" style="height: 200px !important;">
+          </div>
+          <div class="cores">
+              <img src="img/verde.png" alt="Verde">
+              <img src="img/vermelho.png" alt="Vermelho">
+              <img src="img/cinza.png" alt="Cinza">
+              <img src="img/bege.png" alt="Bege">
+          </div>
+          <div class="descrição">
+              <h2>${item.desc}</h2>
+              <p>${item.vl.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+          </div>
+          <div class="carrinho">
+          <button onclick="excluir(${i})"><img src="img/lixeira.png" alt="Carrinho"></button>
+          </div>
+      </div>`
+      } while (i < usuario.carrinho.length)
+  }
+}
+
+// function excluir(){}
+
+function excluir(indice){
+  var usuario = JSON.parse(sessionStorage.getItem('usuario'));
+
+    if (usuario && usuario.carrinho && Array.isArray(usuario.carrinho) && indice >= 0 && indice < usuario.carrinho.length) {
+      usuario.carrinho.splice(indice, 1);
+      
+      sessionStorage.setItem('usuario', JSON.stringify(usuario));
+
+      console.log('Item removido com sucesso.');
+      location.reload();
+    } else {
+        console.log('Erro: O carrinho está vazio ou o índice é inválido.');
+    }
 }
